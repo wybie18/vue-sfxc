@@ -77,6 +77,24 @@ const toggleSubmenu = (menuName: string) => {
                                                         ></NavigationMenuLink
                                                     >
                                                 </li>
+                                                <li>
+                                                    <NavigationMenuLink as-child
+                                                        ><RouterLink
+                                                            to="#"
+                                                            class="block p-3 hover:bg-accent rounded-md"
+                                                            >Clubs</RouterLink
+                                                        ></NavigationMenuLink
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <NavigationMenuLink as-child
+                                                        ><RouterLink
+                                                            to="#"
+                                                            class="block p-3 hover:bg-accent rounded-md"
+                                                            >Student Council</RouterLink
+                                                        ></NavigationMenuLink
+                                                    >
+                                                </li>
                                             </ul>
                                         </NavigationMenuContent>
                                     </NavigationMenuItem>
@@ -98,7 +116,16 @@ const toggleSubmenu = (menuName: string) => {
                                                         ><RouterLink
                                                             to="#"
                                                             class="block p-3 hover:bg-accent rounded-md"
-                                                            >Programs</RouterLink
+                                                            >College Programs</RouterLink
+                                                        ></NavigationMenuLink
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <NavigationMenuLink as-child
+                                                        ><RouterLink
+                                                            to="#"
+                                                            class="block p-3 hover:bg-accent rounded-md"
+                                                            >Scholarship</RouterLink
                                                         ></NavigationMenuLink
                                                     >
                                                 </li>
@@ -114,7 +141,7 @@ const toggleSubmenu = (menuName: string) => {
                                                         ><RouterLink
                                                             to="#"
                                                             class="block p-3 hover:bg-accent rounded-md"
-                                                            >Newsletters</RouterLink
+                                                            >Latest News</RouterLink
                                                         ></NavigationMenuLink
                                                     >
                                                 </li>
@@ -283,7 +310,7 @@ const toggleSubmenu = (menuName: string) => {
             </nav>
         </header>
 
-        <main class="p-6">
+        <main class="w-full max-w-7xl mx-auto px-4 py-8">
             <slot />
         </main>
     </div>
