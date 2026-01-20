@@ -6,11 +6,17 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card'
 
 <template>
     <section id="home" class="relative overflow-hidden">
-        <img src="https://placehold.co/1420x680" class="object-cover mx-auto" alt="" srcset="" />
+        <div
+            class="h-120 md:h-[60dvh] flex flex-col bg-[url('https://placehold.co/1420x680')] bg-cover bg-center bg-no-repeat"
+        >
+            <div class="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
+                <h1 class="text-xl md:text-3xl lg:text-5xl text-white">About SFXC</h1>
+            </div>
+        </div>
     </section>
 
     <section id="mission" class="py-24 bg-background scroll-mt-16">
-        <div class="container mx-auto">
+        <div class="w-300 p-8 mx-auto">
             <div class="grid md:grid-cols-2 gap-12 lg:gap-24 items-center mb-24">
                 <div class="order-2 md:order-1 px-4 md:px-0">
                     <div
@@ -51,7 +57,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card'
     </section>
 
     <section id="vision" class="pb-24 bg-background scroll-mt-16">
-        <div class="container mx-auto">
+        <div class="w-300 p-8 mx-auto">
             <div class="grid md:grid-cols-2 gap-12 lg:gap-24 items-center mb-24">
                 <div class="relative group">
                     <div
@@ -99,7 +105,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card'
             </svg>
         </div>
         <main
-            class="container mx-auto relative z-10 flex md:flex-row justify-center flex-col gap-15 md:gap-10 lg:gap-25 px-4 lg:px-8 py-8"
+            class="w-300 p-8 mx-auto relative z-10 flex md:flex-row justify-center flex-col gap-15 md:gap-10 lg:gap-25 px-4 lg:px-8 py-8"
         >
             <!-- Left Side: Header -->
             <div class="max-w-137.5 md:mt-16 text-center md:text-left">
