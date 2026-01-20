@@ -1,4 +1,5 @@
 import Home from '@/views/Home.vue'
+import MissionVision from '@/views/Abouts/MissionVision.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -8,6 +9,14 @@ const router = createRouter({
             path: '/',
             name: 'home',
             component: Home,
+            meta: {
+                layout: 'guest',
+            },
+        },
+        {
+            path: '/about/mission-vision',
+            name: 'mission-vision',
+            component: MissionVision,
             meta: {
                 layout: 'guest',
             },
