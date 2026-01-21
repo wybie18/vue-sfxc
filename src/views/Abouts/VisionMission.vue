@@ -5,12 +5,33 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card'
 </script>
 
 <template>
-    <section id="home" class="relative overflow-hidden">
+    <section id="home" class="relative">
         <div
-            class="h-120 md:h-[60dvh] flex flex-col bg-[url('https://placehold.co/1420x680')] bg-cover bg-center bg-no-repeat"
+            class="h-120 md:h-[75dvh] flex flex-col relative bg-[url('https://placehold.co/1420x680')] bg-cover bg-center bg-no-repeat"
         >
-            <div class="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
-                <h1 class="text-xl md:text-3xl lg:text-5xl text-white">About SFXC</h1>
+            <div
+                class="absolute inset-0 bg-linear-to-t from-primary/90 via-background/20 to-transparent"
+            ></div>
+
+            <div class="relative z-10 mt-auto w-full md:max-w-4xl ps-5 pb-16 md:ps-10 md:pb-24">
+                <h1
+                    class="text-3xl md:text-5xl lg:text-7xl font-bold text-white tracking-tight drop-shadow-md"
+                >
+                    About SFXC
+                </h1>
+                <p class="text-white/80 mt-4 text-lg md:text-xl max-w-xl">
+                    Shaping the future through faith, excellence, and service.
+                </p>
+            </div>
+
+            <div class="absolute bottom-0 left-0 right-0 text-background leading-none">
+                <svg class="w-full h-12 md:h-24" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                    <path
+                        fill="currentColor"
+                        fill-opacity="1"
+                        d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                    ></path>
+                </svg>
             </div>
         </div>
     </section>
