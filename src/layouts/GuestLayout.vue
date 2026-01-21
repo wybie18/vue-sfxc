@@ -57,7 +57,7 @@ const toggleSubmenu = (menuName: string) => {
                                         </NavigationMenuLink>
                                     </NavigationMenuItem>
                                     <NavigationMenuItem>
-                                        <NavigationMenuTrigger>Abouts</NavigationMenuTrigger>
+                                        <NavigationMenuTrigger>About</NavigationMenuTrigger>
                                         <NavigationMenuContent>
                                             <ul class="grid w-50 gap-2">
                                                 <li>
@@ -94,6 +94,15 @@ const toggleSubmenu = (menuName: string) => {
                                         <NavigationMenuTrigger>Academics</NavigationMenuTrigger>
                                         <NavigationMenuContent>
                                             <ul class="grid w-50 gap-2">
+                                                <li>
+                                                    <NavigationMenuLink as-child
+                                                        ><RouterLink
+                                                            to="#"
+                                                            class="block p-3 hover:bg-accent rounded-md"
+                                                            >Enrollment</RouterLink
+                                                        ></NavigationMenuLink
+                                                    >
+                                                </li>
                                                 <li>
                                                     <NavigationMenuLink as-child
                                                         ><RouterLink
@@ -241,6 +250,11 @@ const toggleSubmenu = (menuName: string) => {
                                     v-if="activeSubmenu === 'academics'"
                                     class="px-4 py-2 space-y-1 bg-gray-50 rounded-b-lg mx-2 mt-1"
                                 >
+                                    <RouterLink
+                                        to="#"
+                                        class="block px-4 py-2 text-sm rounded-md hover:text-accent-foreground hover:bg-accent"
+                                        >Enrollment</RouterLink
+                                    >
                                     <RouterLink
                                         to="#"
                                         class="block px-4 py-2 text-sm rounded-md hover:text-accent-foreground hover:bg-accent"
