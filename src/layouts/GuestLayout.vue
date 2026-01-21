@@ -12,6 +12,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { Menu, X, ChevronDown } from 'lucide-vue-next'
+import Footer from '@/components/ui/custom/Footer.vue'
 
 const isMobileMenuOpen = ref(false)
 
@@ -299,5 +300,7 @@ const toggleSubmenu = (menuName: string) => {
         <main class="w-full">
             <slot />
         </main>
+
+        <Footer />
     </div>
 </template>
