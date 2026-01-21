@@ -123,6 +123,7 @@ onUnmounted(() => {
               :alt="slide.title"
               class="absolute inset-0 w-full h-full object-cover"
             />
+            <div class="absolute inset-0 bg-linear-to-t from-primary/90 via-background/20 to-transparent"></div>
             <div class="absolute inset-0 bg-linear-to-r from-black/70 to-black/30 z-1"></div>
             <div class="relative z-2 h-full flex flex-col justify-center items-center text-center text-white px-8">
               <h2 class="text-4xl sm:text-5xl md:text-6xl max-sm:text-2xl font-bold mb-6 max-sm:mb-4">
