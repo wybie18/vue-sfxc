@@ -3,6 +3,8 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import type { CarouselApi } from '@/components/ui/carousel'
 import sfxcCauldron from '@/assets/images/cauldron.jpg'
+import sfxcMission from '@/assets/images/enrollment-marketing.jpg'
+import sfxcBuilding from '@/assets/images/sfxc-building.jpg'
 
 type HeroButton = {
   text: string
@@ -63,6 +65,12 @@ const programsCarouselApi = ref<CarouselApi>()
 const programsCurrent = ref(0)
 const programsCount = ref(0)
 
+const featureImages = ref([
+  { id: 1, image: sfxcCauldron, alt: 'Feature 1' },
+  { id: 2, image: sfxcMission, alt: 'Feature 2' },
+  { id: 3, image: sfxcBuilding, alt: 'Feature 3' },
+])
+
 const programs = [
   { id: 1, image: sfxcCauldron, alt: 'Course 1', name: 'Program 1' },
   { id: 2, image: sfxcCauldron, alt: 'Course 2', name: 'Program 2' },
@@ -122,6 +130,32 @@ function stopAutoPlay() {
   }
 }
 
+function rotateFeatureImages() {
+  if (featureImages.value.length < 3) return
+  
+  const images = [...featureImages.value]
+  const lastImage = images.pop()
+  
+  if (lastImage) {
+    featureImages.value = [lastImage, ...images]
+  }
+}
+
+let featureImageInterval: ReturnType<typeof setInterval> | null = null
+
+function startFeatureImageRotation() {
+  featureImageInterval = setInterval(() => {
+    rotateFeatureImages()
+  }, 4000)
+}
+
+function stopFeatureImageRotation() {
+  if (featureImageInterval) {
+    clearInterval(featureImageInterval)
+    featureImageInterval = null
+  }
+}
+
 function resetAutoPlay() {
   stopAutoPlay()
   startAutoPlay()
@@ -129,10 +163,12 @@ function resetAutoPlay() {
 
 onMounted(() => {
   startAutoPlay()
+  startFeatureImageRotation()
 })
 
 onUnmounted(() => {
   stopAutoPlay()
+  stopFeatureImageRotation()
 })
 </script>
 
@@ -326,15 +362,33 @@ onUnmounted(() => {
             <!-- Grid -->
             <div class="grid grid-cols-12 gap-2 sm:gap-6 items-center lg:-translate-x-10">
               <div class="col-span-3">
-                <img class="rounded-xl" :src="sfxcCauldron" alt="Features Image">
+                <img 
+                  v-if="featureImages[0]"
+                  class="rounded-xl transition-all duration-1000 ease-out" 
+                  :src="featureImages[0].image" 
+                  :alt="featureImages[0].alt"
+                  :key="featureImages[0].id"
+                >
               </div>
 
               <div class="col-span-4">
-                <img class="rounded-xl" :src="sfxcCauldron" alt="Features Image">
+                <img 
+                  v-if="featureImages[1]"
+                  class="rounded-xl transition-all duration-1000 ease-out" 
+                  :src="featureImages[1].image" 
+                  :alt="featureImages[1].alt"
+                  :key="featureImages[1].id"
+                >
               </div>
 
               <div class="col-span-5">
-                <img class="rounded-xl" :src="sfxcCauldron" alt="Features Image">
+                <img 
+                  v-if="featureImages[2]"
+                  class="rounded-xl transition-all duration-1000 ease-out" 
+                  :src="featureImages[2].image" 
+                  :alt="featureImages[2].alt"
+                  :key="featureImages[2].id"
+                >
               </div>
             </div>
             <!-- End Grid -->
