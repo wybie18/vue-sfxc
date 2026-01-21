@@ -33,8 +33,8 @@ const toggleSubmenu = (menuName: string) => {
 
 <template>
     <div class="min-h-screen bg-background font-sans">
-        <header>
-            <nav class="bg-white shadow-sm sticky top-0 z-50 border-b">
+        <header class="bg-white shadow-sm sticky top-0 z-50 border-b">
+            <nav>
                 <div class="px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between items-center h-20 bg-white relative z-50">
                         <div class="flex items-center">
