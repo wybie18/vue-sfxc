@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card'
 <template>
     <section id="home" class="relative">
         <div
-            class="h-120 md:h-[75dvh] flex flex-col relative bg-[url('https://placehold.co/1420x680')] bg-cover bg-center bg-no-repeat"
+            class="h-120 md:h-[75dvh] flex flex-col relative bg-[url('/src/assets/images/sfxc-building.jpg')] bg-cover bg-center bg-no-repeat"
         >
             <div
                 class="absolute inset-0 bg-linear-to-t from-primary/90 via-background/20 to-transparent"
@@ -32,6 +32,106 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card'
                         d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
                     ></path>
                 </svg>
+            </div>
+        </div>
+    </section>
+
+    <section id="history" class="py-24 bg-muted/20 scroll-mt-16">
+        <div class="container mx-auto px-4 md:px-8 max-w-4xl">
+            <div class="text-center mb-16">
+                <div
+                    class="inline-flex items-center gap-2 text-primary font-bold mb-4 uppercase tracking-wider text-sm"
+                >
+                    Our History
+                </div>
+                <h3 class="text-3xl md:text-5xl font-bold text-foreground leading-tight">
+                    A Legacy of Faith and Learning
+                </h3>
+            </div>
+
+            <div class="relative">
+                <div class="space-y-12 md:space-y-16">
+                    <div class="relative pl-8 md:pl-0 md:pr-1/2 md:pr-12 md:text-right">
+                        <div
+                            class="absolute left-0 top-2 w-3 h-3 rounded-full bg-primary md:left-auto md:right-0 md:-mr-1.5"
+                        ></div>
+                        <div class="md:pr-8">
+                            <p class="text-muted-foreground text-lg leading-relaxed">
+                                As a head start the Saint Francis Xavier College, Inc. (SFXC) rented
+                                an old two-storey residential house of Mr. and Mrs. Demetrio G. del
+                                Rosario. It accommodated 108 students enrolled in short-term
+                                technical-vocational course certificates, Bachelor of Science in
+                                Secretarial Administration, Bachelor of Science in Elementary
+                                Education and Bachelor of Arts in English under the tutelage of 20
+                                instructors and six members of the administrative staff.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8 md:pl-1/2 md:pl-12">
+                        <div
+                            class="absolute left-0 top-2 w-3 h-3 rounded-full bg-secondary md:right-auto md:left-0 md:-ml-1.5"
+                        ></div>
+                        <div class="md:pl-8">
+                            <p class="text-muted-foreground text-lg leading-relaxed">
+                                The SFXC is a non-profit non-stock corporation with a Registration
+                                Number DN – 091-00583 granted by the Security and Exchange
+                                Commission (SEC) on July 25, 1991 under the direct supervision of
+                                the Commission on Higher Education (CHED) and the National Manpower
+                                and Youth Council (NMYC) for the baccalaureate degrees and
+                                technical-vocational courses, respectively.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8 md:pl-0 md:pr-1/2 md:pr-12 md:text-right">
+                        <div
+                            class="absolute left-0 top-2 w-3 h-3 rounded-full bg-tertiary md:left-auto md:right-0 md:-mr-1.5"
+                        ></div>
+                        <div class="md:pr-8">
+                            <p class="text-muted-foreground text-lg leading-relaxed">
+                                Hidden pillars, who stood united to put up a college, were Messrs.
+                                Mamerto Prochina, Baltazar Lumangyao, Demetrio del Rosario, Romeo
+                                Duron, Emmanuel Plaza, Praxedes Lambaco, and Segundo Guelos. The
+                                then Governor Democrito O. Plaza donated 50 units of typewriter for
+                                use in the secretarial course.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8 md:pl-1/2 md:pl-12">
+                        <div
+                            class="absolute left-0 top-2 w-3 h-3 rounded-full bg-primary md:right-auto md:left-0 md:-ml-1.5"
+                        ></div>
+                        <div class="md:pl-8">
+                            <p class="text-muted-foreground text-lg leading-relaxed">
+                                The demise of the legendary patriarch of the province of Agusan del
+                                Sur paved the way for Ma'am Valentina G. Plaza to stretch her arms
+                                in serving its constituents through education. Membership of their
+                                respective spouses was given access to be able to address the
+                                growing needs and increasing population of the college.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8 md:pl-0 md:pr-1/2 md:pr-12 md:text-right">
+                        <div
+                            class="absolute left-0 top-2 w-3 h-3 rounded-full bg-secondary md:left-auto md:right-0 md:-mr-1.5"
+                        ></div>
+                        <div class="md:pr-8">
+                            <p class="text-muted-foreground text-lg leading-relaxed">
+                                A year after its founding in 1990, the Saint Francis Institute of
+                                Technology (SFIT) was renamed Saint Francis Xavier College (SFXC),
+                                to pay tribute and honor to a Jesuit Missionary, who first set his
+                                foot on the continent of Asia and Africa for evangelization and
+                                conversion of the native descents into catholic-Christians. It is
+                                the same visionary task that this college upholds, that each
+                                graduate shall love to serve God unconditionally through the
+                                practice of his profession and calling.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

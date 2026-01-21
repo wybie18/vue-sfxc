@@ -12,6 +12,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { Menu, X, ChevronDown } from 'lucide-vue-next'
+import Footer from '@/components/ui/custom/Footer.vue'
 
 const isMobileMenuOpen = ref(false)
 
@@ -56,7 +57,7 @@ const toggleSubmenu = (menuName: string) => {
                                         </NavigationMenuLink>
                                     </NavigationMenuItem>
                                     <NavigationMenuItem>
-                                        <NavigationMenuTrigger>Abouts</NavigationMenuTrigger>
+                                        <NavigationMenuTrigger>About</NavigationMenuTrigger>
                                         <NavigationMenuContent>
                                             <ul class="grid w-50 gap-2">
                                                 <li>
@@ -93,6 +94,15 @@ const toggleSubmenu = (menuName: string) => {
                                         <NavigationMenuTrigger>Academics</NavigationMenuTrigger>
                                         <NavigationMenuContent>
                                             <ul class="grid w-50 gap-2">
+                                                <li>
+                                                    <NavigationMenuLink as-child
+                                                        ><RouterLink
+                                                            to="#"
+                                                            class="block p-3 hover:bg-accent rounded-md"
+                                                            >Enrollment</RouterLink
+                                                        ></NavigationMenuLink
+                                                    >
+                                                </li>
                                                 <li>
                                                     <NavigationMenuLink as-child
                                                         ><RouterLink
@@ -243,6 +253,11 @@ const toggleSubmenu = (menuName: string) => {
                                     <RouterLink
                                         to="#"
                                         class="block px-4 py-2 text-sm rounded-md hover:text-accent-foreground hover:bg-accent"
+                                        >Enrollment</RouterLink
+                                    >
+                                    <RouterLink
+                                        to="#"
+                                        class="block px-4 py-2 text-sm rounded-md hover:text-accent-foreground hover:bg-accent"
                                         >Tesda</RouterLink
                                     >
                                     <RouterLink
@@ -299,5 +314,7 @@ const toggleSubmenu = (menuName: string) => {
         <main class="w-full">
             <slot />
         </main>
+
+        <Footer />
     </div>
 </template>
