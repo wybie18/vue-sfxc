@@ -39,7 +39,7 @@ const navigationItems = ref<NavigationItem[]>([
         name: 'About',
         type: 'dropdown',
         items: [
-            { name: 'School Patron', to: '#' },
+            { name: 'School Patron', to: { name: 'school-patron' } },
             { name: 'Vision & Mission', to: { name: 'vision-mission' } },
             { name: 'Organizations', to: '#' },
         ],
