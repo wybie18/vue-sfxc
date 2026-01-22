@@ -41,7 +41,7 @@ const navigationItems = ref<NavigationItem[]>([
         items: [
             { name: 'School Patron', to: { name: 'school-patron' } },
             { name: 'Vision & Mission', to: { name: 'vision-mission' } },
-            { name: 'Organizations', to: '#' },
+            { name: 'Organizations', to: { name: 'organizations' } },
         ],
     },
     {

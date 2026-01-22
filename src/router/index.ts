@@ -2,6 +2,7 @@ import Home from '@/views/Home.vue'
 import MissionVision from '@/views/Abouts/VisionMission.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import SchoolPatron from '@/views/Abouts/SchoolPatron.vue'
+import Organizations from '@/views/Abouts/Organizations.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,14 @@ const router = createRouter({
             path: '/about/school-patron',
             name: 'school-patron',
             component: SchoolPatron,
+            meta: {
+                layout: 'guest',
+            },
+        },
+        {
+            path: '/about/organizations',
+            name: 'organizations',
+            component: Organizations,
             meta: {
                 layout: 'guest',
             },
