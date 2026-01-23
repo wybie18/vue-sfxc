@@ -45,7 +45,7 @@ import { Quote } from 'lucide-vue-next'
                         class="skew-x-12 overflow-hidden rounded-xl shadow-xl border border-border"
                     >
                         <img
-                            src="https://placehold.co/600x800"
+                            src="https://www.catholicapostolatecenter.org/uploads/9/2/4/6/9246931/637779979_orig.jpg"
                             alt="Saint Francis Xavier"
                             class="w-full object-cover aspect-3/4 -skew-x-12 scale-125"
                         />
