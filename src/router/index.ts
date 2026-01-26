@@ -1,9 +1,10 @@
 import Home from '@/views/Home.vue'
 import MissionVision from '@/views/Abouts/VisionMission.vue'
-import Enrollment from '@/views/Academics/Enrollment.vue'
+import Enrollment from '@/views/Admission/Enrollment.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import SchoolPatron from '@/views/Abouts/SchoolPatron.vue'
 import Organizations from '@/views/Abouts/Organizations.vue'
+import Tesda from '@/views/Academics/Tesda.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,14 @@ const router = createRouter({
             path: '/academics/enrollment',
             name: 'enrollment',
             component: Enrollment,
+            meta: {
+                layout: 'guest',
+            },
+        },
+        {
+            path: '/academics/tesda',
+            name: 'tesda',
+            component: Tesda,
             meta: {
                 layout: 'guest',
             },
