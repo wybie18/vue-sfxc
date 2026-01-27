@@ -110,7 +110,7 @@ const benefits = [
       <!-- Hero Image -->
       <div class="absolute inset-0">
         <img 
-          src="https://images.unsplash.com/photo-1449965408869-euj74de41f3d?q=80&w=2070&auto=format&fit=crop"
+          src="@/assets/images/sfxc-building.jpg"
           alt="Professional Driving Training"
           class="w-full h-full object-cover"
         />
@@ -121,9 +121,6 @@ const benefits = [
       <!-- Content -->
       <div class="relative h-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
         <div class="max-w-xl">
-          <span class="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-white/10 backdrop-blur-sm text-white/90 rounded-full mb-6">
-            TESDA National Certification
-          </span>
           
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight">
             Driving NC II
@@ -133,29 +130,10 @@ const benefits = [
             Professional driving training program for operating light vehicles safely and efficiently.
           </p>
 
-          <!-- Course Info Pills -->
-          <div class="flex flex-wrap gap-3 mb-10">
-            <div class="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
-              <Clock class="h-4 w-4 text-white/70" />
-              <span class="text-sm text-white">3 Months</span>
-            </div>
-            <div class="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
-              <Award class="h-4 w-4 text-white/70" />
-              <span class="text-sm text-white">NC II Level</span>
-            </div>
-            <div class="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
-              <Calendar class="h-4 w-4 text-white/70" />
-              <span class="text-sm text-white">Open Enrollment</span>
-            </div>
-          </div>
-
           <!-- CTA Buttons -->
           <div class="flex flex-wrap gap-4">
             <Button size="lg" class="bg-white text-black hover:bg-white/90">
               Apply Now
-            </Button>
-            <Button size="lg" variant="outline" class="border-white/30 text-white hover:bg-white/10">
-              Download Brochure
             </Button>
           </div>
         </div>
