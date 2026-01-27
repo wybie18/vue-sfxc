@@ -105,56 +105,112 @@ const benefits = [
 
     <Separator />
 
-    <!-- Courses Section -->
-    <section class="py-12 sm:py-16 md:py-20 lg:py-24 bg-muted/30">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10 sm:mb-12 md:mb-16">
-          <!-- <Badge variant="outline" class="mb-4">Available Programs</Badge> -->
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
-            TESDA Courses Offered
-          </h2>
-          <p class="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
-            Choose from our wide range of industry-aligned technical vocational courses
-          </p>
-        </div>
+    <!-- Driving NC II Hero Section -->
+    <section class="relative h-[70vh] min-h-500px max-h-700px overflow-hidden">
+      <!-- Hero Image -->
+      <div class="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1449965408869-euj74de41f3d?q=80&w=2070&auto=format&fit=crop"
+          alt="Professional Driving Training"
+          class="w-full h-full object-cover"
+        />
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-linear-to-r from-black/80 via-black/60 to-black/40" />
+      </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Card 
-            v-for="course in tesdaCourses" 
-            :key="course.id" 
-            class="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
-          >
+      <!-- Content -->
+      <div class="relative h-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+        <div class="max-w-xl">
+          <span class="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-white/10 backdrop-blur-sm text-white/90 rounded-full mb-6">
+            TESDA National Certification
+          </span>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight">
+            Driving NC II
+          </h1>
+          
+          <p class="text-lg text-white/80 mb-8 leading-relaxed">
+            Professional driving training program for operating light vehicles safely and efficiently.
+          </p>
+
+          <!-- Course Info Pills -->
+          <div class="flex flex-wrap gap-3 mb-10">
+            <div class="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
+              <Clock class="h-4 w-4 text-white/70" />
+              <span class="text-sm text-white">3 Months</span>
+            </div>
+            <div class="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
+              <Award class="h-4 w-4 text-white/70" />
+              <span class="text-sm text-white">NC II Level</span>
+            </div>
+            <div class="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
+              <Calendar class="h-4 w-4 text-white/70" />
+              <span class="text-sm text-white">Open Enrollment</span>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap gap-4">
+            <Button size="lg" class="bg-white text-black hover:bg-white/90">
+              Apply Now
+            </Button>
+            <Button size="lg" variant="outline" class="border-white/30 text-white hover:bg-white/10">
+              Download Brochure
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Details Section -->
+    <section class="py-16 sm:py-20 bg-background">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+          <!-- Key Competencies -->
+          <Card class="border-0 shadow-sm">
             <CardHeader>
-              <div class="flex items-start justify-between gap-2 mb-2">
-                <Badge variant="secondary">{{ course.level }}</Badge>
-                <div class="flex items-center text-muted-foreground text-xs sm:text-sm">
-                  <Clock class="h-4 w-4 mr-1" />
-                  {{ course.duration }}
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <BookOpen class="h-5 w-5 text-primary" />
                 </div>
+                <CardTitle class="text-xl">Key Competencies</CardTitle>
               </div>
-              <CardTitle class="text-lg sm:text-xl leading-tight">{{ course.title }}</CardTitle>
-              <CardDescription class="text-sm leading-relaxed">
-                {{ course.description }}
-              </CardDescription>
             </CardHeader>
-            <CardContent class="flex-1 flex flex-col">
-              <div class="mb-4 flex-1">
-                <p class="text-sm font-semibold text-foreground mb-2">Key Competencies:</p>
-                <div class="flex flex-wrap gap-1.5">
-                  <Badge 
-                    v-for="skill in course.skills" 
-                    :key="skill" 
-                    variant="outline"
-                    class="text-xs"
-                  >
-                    {{ skill }}
-                  </Badge>
+            <CardContent>
+              <ul class="space-y-4">
+                <li 
+                  v-for="skill in tesdaCourses[0]?.skills" 
+                  :key="skill"
+                  class="flex items-center gap-3"
+                >
+                  <CheckCircle2 class="h-5 w-5 text-primary shrink-0" />
+                  <span class="text-muted-foreground">{{ skill }}</span>
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <!-- Requirements -->
+          <Card class="border-0 shadow-sm">
+            <CardHeader>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <FileText class="h-5 w-5 text-primary" />
                 </div>
+                <CardTitle class="text-xl">Admission Requirements</CardTitle>
               </div>
-              <Button class="w-full" variant="outline">
-                <BookOpen class="mr-2 h-4 w-4" />
-                Learn More
-              </Button>
+            </CardHeader>
+            <CardContent>
+              <ul class="space-y-4">
+                <li 
+                  v-for="(requirement, index) in requirements" 
+                  :key="index"
+                  class="flex items-center gap-3"
+                >
+                  <CheckCircle2 class="h-5 w-5 text-primary shrink-0" />
+                  <span class="text-muted-foreground">{{ requirement }}</span>
+                </li>
+              </ul>
             </CardContent>
           </Card>
         </div>
@@ -162,34 +218,5 @@ const benefits = [
     </section>
 
     <Separator />
-
-    <!-- Requirements Section -->
-    <section class="py-12 sm:py-16 md:py-20 lg:py-24">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10 sm:mb-12">
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
-            Admission Requirements
-          </h2>
-          <p class="text-muted-foreground text-sm sm:text-base">
-            Please prepare the following documents for enrollment
-          </p>
-        </div>
-
-        <Card class="shadow-lg">
-          <CardContent class="pt-6">
-            <ul class="space-y-3">
-              <li 
-                v-for="(requirement, index) in requirements" 
-                :key="index"
-                class="flex items-start gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors"
-              >
-                <CheckCircle2 class="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span class="text-sm sm:text-base text-foreground">{{ requirement }}</span>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-      </div>
-    </section>
   </div>
 </template>
