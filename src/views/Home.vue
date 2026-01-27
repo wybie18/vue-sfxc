@@ -3,6 +3,11 @@ import { ref } from 'vue'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import type { CarouselApi } from '@/components/ui/carousel'
 import sfxcCauldron from '@/assets/images/cauldron.jpg'
+import bsit from '@/assets/images/news/sfxc_bsit.jpg'
+import bsit2 from '@/assets/images/news/sfxc_bsit2.jpg'
+import bsit3 from '@/assets/images/news/sfxc_bsit3.jpg'
+import bsit4 from '@/assets/images/news/sfxc_bsit4.jpg'
+import bsitUpdate from '@/assets/images/news/sfxc_update.jpg'
 import Autoplay from 'embla-carousel-autoplay'
 type HeroButton = {
   text: string
@@ -74,12 +79,12 @@ const programsCurrent = ref(0)
 const programsCount = ref(0)
 
 const programs = [
-  { id: 1, image: sfxcCauldron, alt: 'Course 1', name: 'Program 1' },
-  { id: 2, image: sfxcCauldron, alt: 'Course 2', name: 'Program 2' },
-  { id: 3, image: sfxcCauldron, alt: 'Course 3', name: 'Program 3' },
-  { id: 4, image: sfxcCauldron, alt: 'Course 4', name: 'Program 4' },
-  { id: 5, image: sfxcCauldron, alt: 'Course 5', name: 'Program 5' },
-  { id: 6, image: sfxcCauldron, alt: 'Course 6', name: 'Program 6' },
+  { id: 1, image: bsit, alt: 'Course 1', name: 'Program 1' },
+  { id: 2, image: bsit2, alt: 'Course 2', name: 'Program 2' },
+  { id: 3, image: bsit3, alt: 'Course 3', name: 'Program 3' },
+  { id: 4, image: bsit4, alt: 'Course 4', name: 'Program 4' },
+  { id: 5, image: bsitUpdate, alt: 'Course 5', name: 'Program 5' },
+  { id: 6, image: bsitUpdate, alt: 'Course 6', name: 'Program 6' },
 ]
 
 function setApi(api: CarouselApi) {
