@@ -403,7 +403,7 @@ function goToSlide(index: number) {
             <div class="group flex gap-3 sm:gap-4 bg-card rounded-lg sm:rounded-xl overflow-hidden shadow hover:shadow-lg transition-all duration-300">
               <div class="w-24 sm:w-32 md:w-40 shrink-0 overflow-hidden">
                 <img
-                  src="@/assets/images/news/sfxc_Midterm.jpg"
+                  src="@/assets/images/news/sfxc_midterm.jpg"
                   alt="News 3"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
