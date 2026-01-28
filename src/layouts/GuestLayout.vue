@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { Menu, X, ChevronDown } from 'lucide-vue-next'
 import Footer from '@/components/ui/custom/Footer.vue'
+import SchoolLogo from '@/components/ui/custom/logo/SchoolLogo.vue'
 
 const isMobileMenuOpen = ref(false)
 const activeSubmenu = ref<string | null>(null)
@@ -53,7 +54,7 @@ const navigationItems = ref<NavigationItem[]>([
             { name: 'Scholarship', to: '#' },
         ],
     },
-        {
+    {
         name: 'Admission',
         type: 'dropdown',
         items: [
@@ -98,10 +99,12 @@ const toggleSubmenu = (menuName: string) => {
                 <div class="px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between items-center h-20 bg-white relative z-50">
                         <div class="flex items-center">
-                            <img
-                                src="@/assets/images/sfxc-logo-with-name.jpg"
-                                alt="St. Francis Xavier College Logo"
-                                class="w-54 md:w-70 h-auto object-contain"
+                            <SchoolLogo
+                                variant="horizontal"
+                                icon-class="w-10"
+                                alt="Company Name"
+                                logo-width="68px"
+                                text-width="220px"
                             />
                         </div>
                         <div class="hidden md:flex items-center space-x-1">
