@@ -25,7 +25,7 @@ const YoutubeIcon = {
           Contact Us
         </h1>
         <p class="text-white/80 mt-4 text-lg md:text-xl max-w-xl">
-          We’d love to hear from you. Reach out to Saint Francis Xavier College anytime.
+          We’d love to hear from you. Reach out to St. Francis Xavier College anytime.
         </p>
       </div>
 
@@ -55,19 +55,19 @@ const YoutubeIcon = {
             <div class="flex items-start gap-4">
               <MapPin class="w-6 h-6 text-tertiary shrink-0 mt-1" />
               <p>
-                Saint Francis Xavier College<br />
+                St. Francis Xavier College<br />
                 Agusan del Sur, Philippines
               </p>
             </div>
 
             <div class="flex items-center gap-4">
               <Phone class="w-6 h-6 text-tertiary shrink-0" />
-              <p>+63 9XX XXX XXXX</p>
+              <p>+63 985 343 8327</p>
             </div>
 
             <div class="flex items-center gap-4">
               <Mail class="w-6 h-6 text-tertiary shrink-0" />
-              <p>info@sfxc.edu.ph</p>
+              <p>communications@sfxc.edu.ph</p>
             </div>
 
             <!-- SOCIAL MEDIA -->

@@ -17,6 +17,7 @@ import SchoolLogo from '@/components/ui/custom/logo/SchoolLogo.vue'
 import SFXCLogoOnly from '@/assets/images/sfxc-logo-only.png'
 import SFXCTextOnly from '@/assets/images/sfxc-text-only.png'
 
+
 const isMobileMenuOpen = ref(false)
 const activeSubmenu = ref<string | null>(null)
 
@@ -69,12 +70,11 @@ const navigationItems = ref<NavigationItem[]>([
         name: 'News',
         type: 'dropdown',
         items: [
-            { name: 'Latest News', to: '#' },
+            { name: 'Latest News', to: { name: 'news' } },
             { name: 'Announcements', to: '#' },
         ],
     },
-    {
-        name: 'Contact',
+    { name: 'Contact',
         type: 'link',
         to: '/contact',
     },
